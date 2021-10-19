@@ -5,13 +5,13 @@ name: boost-releases EOL LF
 
 steps:
   - name: build snapshot EOL LF
-    image: cppalliance/boost_superproject_build:python3-build2
+    image: cppalliance/boost_superproject_build:build-deps-5
     commands:
-        - wget "https://raw.githubusercontent.com/sdarwin/release-tools/tester1/ci_boost_common.py"
-        - wget "https://raw.githubusercontent.com/sdarwin/release-tools/tester1/ci_boost_release.py"
-        - python3 ci_boost_release.py checkout_post
+        - wget "https://raw.githubusercontent.com/sdarwin/release-tools/py2-tester2/ci_boost_common.py"
+        - wget "https://raw.githubusercontent.com/sdarwin/release-tools/py2-tester2/ci_boost_release.py"
+        - python ci_boost_release.py checkout_post
         # - run: python ci_boost_release.py dependencies_override
-        - EOL=LF python3 ci_boost_release.py test_override
+        - EOL=LF python ci_boost_release.py test_override
 
 ---
 kind: pipeline
@@ -20,10 +20,10 @@ name: boost-releases EOL CRLF
 
 steps:
   - name: build-snapshot EOL CRLF
-    image: cppalliance/boost_superproject_build:python3-build2
+    image: cppalliance/boost_superproject_build:build-deps-5
     commands:
-        - wget "https://raw.githubusercontent.com/sdarwin/release-tools/tester1/ci_boost_common.py"
-        - wget "https://raw.githubusercontent.com/sdarwin/release-tools/tester1/ci_boost_release.py"
-        - python3 ci_boost_release.py checkout_post
+        - wget "https://raw.githubusercontent.com/sdarwin/release-tools/py2-tester2/ci_boost_common.py"
+        - wget "https://raw.githubusercontent.com/sdarwin/release-tools/py2-tester2/ci_boost_release.py"
+        - python ci_boost_release.py checkout_post
         # - run: python ci_boost_release.py dependencies_override
-        - EOL=CRLF python3 ci_boost_release.py test_override
+        - EOL=CRLF python ci_boost_release.py test_override
