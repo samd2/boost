@@ -24,6 +24,6 @@ steps:
     commands:
         - wget "https://raw.githubusercontent.com/sdarwin/release-tools/tester1/ci_boost_common.py"
         - wget "https://raw.githubusercontent.com/sdarwin/release-tools/tester1/ci_boost_release.py"
-        - python3 ${HOME}/ci_boost_release.py checkout_post
+        - python3 ci_boost_release.py checkout_post
         # - run: python ci_boost_release.py dependencies_override
         - EOL=CRLF python3 ci_boost_release.py test_override
