@@ -2,7 +2,7 @@
 kind: pipeline
 type: docker
 name: boost-releases EOL LF
-triggers:
+trigger:
   branch:
     - master
     - develop
@@ -24,7 +24,7 @@ steps:
 kind: pipeline
 type: docker
 name: boost-releases EOL CRLF
-triggers:
+trigger:
   branch:
     - master
     - develop
