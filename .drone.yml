@@ -8,9 +8,9 @@ triggers:
     - develop
     # remove this in production:
     - feature/*
-secrets: 
-  - gh_token
-  # - artifactory_pass
+environment:
+    GH_TOKEN:
+      from_secret: gh_token
  
 steps:
   - name: build snapshot EOL LF
@@ -32,9 +32,9 @@ triggers:
     - develop
     # remove this in production:
     - feature/*
-secrets: 
-  - gh_token
-  # - artifactory_pass
+environment:
+    GH_TOKEN:
+      from_secret: gh_token
 
 steps:
   - name: build-snapshot EOL CRLF
