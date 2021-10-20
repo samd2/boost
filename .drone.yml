@@ -14,7 +14,7 @@ secrets:
  
 steps:
   - name: build snapshot EOL LF
-    image: cppalliance/boost_superproject_build:build-deps-5
+    image: cppalliance/boost_superproject_build:python3-build2
     commands:
         - wget "https://raw.githubusercontent.com/sdarwin/release-tools/tester1/ci_boost_common.py"
         - wget "https://raw.githubusercontent.com/sdarwin/release-tools/tester1/ci_boost_release.py"
@@ -38,7 +38,7 @@ secrets:
 
 steps:
   - name: build-snapshot EOL CRLF
-    image: cppalliance/boost_superproject_build:build-deps-5
+    image: cppalliance/boost_superproject_build:python3-build2
     commands:
         - wget "https://raw.githubusercontent.com/sdarwin/release-tools/tester1/ci_boost_common.py"
         - wget "https://raw.githubusercontent.com/sdarwin/release-tools/tester1/ci_boost_release.py"
