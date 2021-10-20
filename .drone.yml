@@ -8,13 +8,13 @@ triggers:
     - develop
     # remove this in production:
     - feature/*
-environment:
-    GH_TOKEN:
-      from_secret: gh_token
  
 steps:
   - name: build snapshot EOL LF
     image: cppalliance/boost_superproject_build:python3-build2
+    environment:
+      GH_TOKEN:
+        from_secret: gh_token
     commands:
         - wget "https://raw.githubusercontent.com/sdarwin/release-tools/tester1/ci_boost_common.py"
         - wget "https://raw.githubusercontent.com/sdarwin/release-tools/tester1/ci_boost_release.py"
@@ -32,13 +32,13 @@ triggers:
     - develop
     # remove this in production:
     - feature/*
-environment:
-    GH_TOKEN:
-      from_secret: gh_token
 
 steps:
   - name: build-snapshot EOL CRLF
     image: cppalliance/boost_superproject_build:python3-build2
+    environment:
+      GH_TOKEN:
+        from_secret: gh_token
     commands:
         - wget "https://raw.githubusercontent.com/sdarwin/release-tools/tester1/ci_boost_common.py"
         - wget "https://raw.githubusercontent.com/sdarwin/release-tools/tester1/ci_boost_release.py"
