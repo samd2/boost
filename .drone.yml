@@ -28,8 +28,6 @@ triggers:
   branch:
     - master
     - develop
-    # remove this in production:
-    - feature/*
 
 steps:
   - name: build-snapshot EOL CRLF
